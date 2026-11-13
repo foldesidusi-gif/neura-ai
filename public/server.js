@@ -20,7 +20,7 @@ const openai = new OpenAI({
 
 app.use(helmet());
 app.use(express.json({ limit: "12mb" }));
-app.use(express.static("public"));
+app.use(express.static("."));
 
 app.use("/api/", rateLimit({
     windowMs: 60 * 1000,
