@@ -4,6 +4,8 @@ import OpenAI from "openai";
 import dotenv from "dotenv";
 import helmet from "helmet";
 import rateLimit from "express-rate-limit";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
 dotenv.config();
 
@@ -20,7 +22,7 @@ const openai = new OpenAI({
 
 app.use(helmet());
 app.use(express.json({ limit: "12mb" }));
-app.use(express.static("."));
+app.use(express.static(__dirname));
 
 app.use("/api/", rateLimit({
     windowMs: 60 * 1000,
