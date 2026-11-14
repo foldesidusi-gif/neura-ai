@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neura AI</title>
+  <meta name="theme-color" content="#090914">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo">
+        <div class="logo-icon">N</div>
+        <span>NEURA <b>AI</b></span>
+      </div>
+
+      <button class="new-chat" id="newChat">＋ Új beszélgetés</button>
+
+      <div class="sidebar-bottom">
+        <div class="status-dot"></div>
+        <span>Neura AI online</span>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="mobile-logo">NEURA <b>AI</b></div>
+        <div class="model-label">✦ Neura Intelligence</div>
+      </header>
+
+      <section class="chat-area" id="chatArea">
+        <div class="welcome" id="welcome">
+          <div class="orb">✦</div>
+          <p class="eyebrow">ÜDVÖZÖL A NEURA AI</p>
+          <h1>A jövő intelligenciája<br><span>itt kezdődik.</span></h1>
+          <p class="welcome-text">
+            Kérdezz bármit, alkoss ötleteket, és fedezz fel új lehetőségeket!
+          </p>
+        </div>
+
+        <div class="messages" id="messages"></div>
+      </section>
+
+      <form class="input-area" id="chatForm">
+        <div class="input-box">
+          <textarea
+            id="messageInput"
+            placeholder="Írj valamit a Neura AI-nak..."
+            rows="1"
+            maxlength="12000"
+          ></textarea>
+          <button type="submit" id="sendButton" aria-label="Küldés">➤</button>
+        </div>
+        <p class="disclaimer">A Neura AI válaszai pontatlanok lehetnek. Ellenőrizd a fontos információkat.</p>
+      </form>
+    </main>
+  </div>
+</body>
+</html>
